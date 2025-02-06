@@ -1,11 +1,12 @@
 # IT206 Assignment - A simple Snake Game !!
 
-### // include libraries
+// include libraries
 
 
 #include <iostream>
 #include <conio.h>
 #include <windows.h>  
+
 using namespace std;
 bool gameover;
 const int width = 25; 
@@ -15,6 +16,7 @@ int tailX[100], tailY[100];
 int tLength = 0;         
 enum direction { Stop = 0, Up, Down, Left, Right };
 direction dir;
+
 void game() {
     gameover = false;
     dir = Stop;
@@ -23,7 +25,8 @@ void game() {
     Xfruit = rand() % (width - 1);
     Yfruit = rand() % (length - 2);
     score,tLength = 0;
-}void construct() {
+}
+void construct() {
     system("cls"); 
 
     for (int i = 0; i < width; i++) {
