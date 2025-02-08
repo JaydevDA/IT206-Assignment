@@ -256,6 +256,57 @@ if (x == Xfruit && y == Yfruit) {
         Yfruit = rand() % (length - 2);
 }
 ```
+- Thus, the final complete code for the function logic().
+```
+void logic() {
+    for (int i = tLength - 1; i > 0; i--) {
+        tailX[i] = tailX[i - 1];
+        tailY[i] = tailY[i - 1];
+    }
+
+    if (tLength > 0) {
+        tailX[0] = x;
+        tailY[0] = y;
+    }
+
+    switch (dir) {
+        case Up:    
+            y--; 
+            break;
+        case Down:  
+            y++; 
+            break;
+        case Right: 
+            x++; 
+            break;
+        case Left:  
+            x--; 
+            break;
+        default: 
+            break;
+    }
+
+    
+    if (x <= 0 || x >= width - 1 || y < 0 || y >= length - 1) {
+        gameover = true;
+    }
+
+    
+    for (int i = 0; i < tLength; i++) {
+        if (tailX[i] == x && tailY[i] == y) {
+            gameover = true;
+        }
+    }
+
+    
+    if (x == Xfruit && y == Yfruit) {
+        score += 10;
+        tLength++; 
+        Xfruit = rand() % (width - 1);
+        Yfruit = rand() % (length - 2);
+    }
+}
+```
 // include libraries
 
 #include <iostream> 
