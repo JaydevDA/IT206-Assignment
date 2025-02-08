@@ -14,9 +14,9 @@
 
 ## Include Libraries:
 
-#include <iostream> - OS Agnostic // for doing i/p and o/p operations
-#include <conio.h> - Non-OS Agnostic // for doing console i/p and o/p operations
-#include <windows.h> - Non-OS Agnostic // for system("cls")
+#include <iostream> - OS Agnostic // for doing i/p and o/p operations  
+#include <conio.h> - Non-OS Agnostic // for doing console i/p and o/p operations  
+#include <windows.h> - Non-OS Agnostic // for system("cls")  
 
 ## Declaring Variables:
 Values which will help in setting a graphical representation of the snake
