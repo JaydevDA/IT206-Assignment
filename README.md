@@ -315,7 +315,7 @@ void logic() {
   we will implement **input()** to type which key alphabets to assign dir to a specific direction(Up,Down,Left,Right)  
   we will then implement **logic()** to give logic to the program and how it works.  
   we will write Sleep(100) for the program to update at a moderate time interval, that makes the game playable.  
-- when gameover becomes false, it skips the while loop and gives the output that the game has ended.  
+- when gameover becomes true, it skips the while loop and gives the output that the game has ended.  
 
 ```
 int main() {
