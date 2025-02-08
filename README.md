@@ -307,141 +307,16 @@ void logic() {
     }
 }
 ```
-// include libraries
+## int main() (the section where the functions will be implemented)
 
-#include <iostream> 
-#include <conio.h>
-#include <windows.h>  
+- First of all, we will implement the function **game()**, which will set the parameters of the grpahics of the game.  
+- while gameover is false, we will implement **construct()** to construct the graphics of the game,  
+                           we will implement **input()** to type which key alphabets to assign dir to a specific direction(Up,Down,Left,Right)  
+                           we will then implement **logic()** to give logic to the program and how it works.  
+                           we will write Sleep(100) for the program to update at a moderate time interval, that makes the game playable.  
+- when gameover becomes false, it skips the while loop and gives the output that the game has ended.  
 
-using namespace std;
-bool gameover;
-const int width = 25; 
-const int length = 25;
-int x, y, Xfruit, Yfruit, score;
-int tailX[100], tailY[100]; 
-int tLength ;         
-enum direction { Stop = 0, Up, Down, Left, Right };
-direction dir;
-
-void game() {
-    gameover = false;
-    dir = Stop;
-    x = width / 2;
-    y = length / 2;
-    Xfruit = rand() % (width - 1);
-    Yfruit = rand() % (length - 2);
-    score,tLength = 0;
-}
-void construct() {
-    system("cls"); 
-
-    for (int i = 0; i < width; i++) {
-        cout << "#";
-    }
-    cout << endl;
-
-    for (int i = 0; i < length - 1; i++) {
-        for (int j = 0; j < width; j++) {
-            if (j == 0 || j == width - 1)
-                cout << "#";
-            else if (j == x && i == y)
-                cout << "W"; 
-            else if (j == Xfruit && i == Yfruit)
-                cout << "$"; 
-            else {
-                bool printTail = false;
-                for (int k = 0; k < tLength; k++) {
-                    if (tailX[k] == j && tailY[k] == i) {
-                        cout << "X"; 
-                        printTail = true;
-                        break;
-                    }
-                }
-                if (!printTail)
-                    cout << " ";
-            }
-        }
-        cout << endl;
-    }
-
-    for (int i = 0; i < width; i++){
-    cout << "#";
-    }
-    cout << "\nScore: " << score << endl;
-}
-
-void input() {
-    if (_kbhit()) {
-        switch (_getch()) {
-            case 'w': 
-                if (dir != Down) 
-                    dir = Up; 
-                    break;
-            case 'a': 
-                if (dir != Right) 
-                    dir = Left; 
-                    break;
-            case 's': 
-                if (dir != Up) 
-                    dir = Down; 
-                    break;
-            case 'd': 
-                if (dir != Left) 
-                    dir = Right; 
-                    break;
-        }
-    }
-}
-
-void logic() {
-    for (int i = tLength - 1; i > 0; i--) {
-        tailX[i] = tailX[i - 1];
-        tailY[i] = tailY[i - 1];
-    }
-
-    if (tLength > 0) {
-        tailX[0] = x;
-        tailY[0] = y;
-    }
-
-    switch (dir) {
-        case Up:    
-            y--; 
-            break;
-        case Down:  
-            y++; 
-            break;
-        case Right: 
-            x++; 
-            break;
-        case Left:  
-            x--; 
-            break;
-        default: 
-            break;
-    }
-
-    
-    if (x <= 0 || x >= width - 1 || y < 0 || y >= length - 1) {
-        gameover = true;
-    }
-
-    
-    for (int i = 0; i < tLength; i++) {
-        if (tailX[i] == x && tailY[i] == y) {
-            gameover = true;
-        }
-    }
-
-    
-    if (x == Xfruit && y == Yfruit) {
-        score += 10;
-        tLength++; 
-        Xfruit = rand() % (width - 1);
-        Yfruit = rand() % (length - 2);
-    }
-}
-
+```
 int main() {
     game();
     while (!gameover) {
@@ -453,5 +328,5 @@ int main() {
     cout << "\nGame Over!\n";
     return 0;
 }
-
+```
 
