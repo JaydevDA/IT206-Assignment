@@ -1,9 +1,45 @@
-# IT206 Assignment - A simple Snake Game !!
+# A Simple Snake Game 🐍
+- By Jaydev Dhabaliya 😎
+- Dhruvir S Mayavat 😎
+- Rashi Krishnani 👧🏻
+- Rudrapratap Singh 😎
+
+# Description
+
+-The Snake Game in C++ is a classic arcade-style game built to demonstrate fundamental programming concepts such as game loops, user input handling, and collision detection. What makes this version unique is its 
+ clean, modular code structure, making it easy to modify and extend with additional features like scoring, speed variations, or graphical enhancements.
+-We will be using c++ as the coding language, and here is the step to step process to make the snake.
+
+# Code Overview
+
+## Include Libraries:
+
+#include <iostream> - OS Agnostic // for doing i/p and o/p operations
+#include <conio.h> - Non-OS Agnostic // for doing console i/p and o/p operations
+#include <windows.h> - Non-OS Agnostic // for system("cls")
+
+## Declaring Variables:
+Values which will help in setting a graphical representation of the snake
+- making a constant width and length of 25 units.
+- **bool gameover** - to end the game when one of the many conditions is met.
+- **x,y and Xfruit,Yfruit** - Position of the head of the snake and a fruit respectively.
+- **int score = 0** - set the score to zero intitially.
+- **int tail[100] and tail[100]** - to store the elements in the tail.
+- **int tLength = 0** - setting the length of the tail to be zero.
+- enum direction - to declare enum of directions like left,up,down and right, and also stop.
+  
+
+## Writing the key functions:
+
+there are 4 key functions necessary for the snake program:
+
+- void game() - to start/end the game
+- void construct() - to construct a graphical representation of the values 
+  
 
 // include libraries
 
-
-#include <iostream>
+#include <iostream> 
 #include <conio.h>
 #include <windows.h>  
 
@@ -148,4 +184,3 @@ int main() {
 }
 
 
-Snake game code
