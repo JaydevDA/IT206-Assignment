@@ -161,10 +161,13 @@ else {
                     cout << " ";
             }
 ```
-- Here, we take bool printTail, to specify if the specific cell at the position (j,i) is printed or not.  
+- Here, we declare bool printTail, to specify if the specific cell at the position (j,i) is printed or not.  
 - By default, we take printTail to be false, as we have not printed a tail segment anywhere.  
 - After traversing, when (j,i) is equal to the position at tailX and tailY, we print the tail as 'X', and to specify that the cell is printed, we set printTail to be true.  
-- Any other position will be printed as " ".  
+- Any other position will be printed as " ".
+
+### void input() :-
+
 // include libraries
 
 #include <iostream> 
