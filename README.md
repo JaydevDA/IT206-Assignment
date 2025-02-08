@@ -107,7 +107,44 @@ for (int i = 0; i < width; i++) {
     }
     cout << "\nScore: " << score << endl;
 ```
+- Now, we will graphically represent the position of the snake's head and the fruit.
+- Also we will graphicallly represent the elements of the growth of tail.
+```
+// **Updating previous code**:
+for (int i = 0; i < width; i++) {
+        cout << "#";
+    }
+    cout << endl;
 
+    for (int i = 0; i < length - 1; i++) {
+        for (int j = 0; j < width; j++) {
+            if (j == 0 || j == width - 1)
+                cout << "#";
+            else if (j == x && i == y)
+                cout << "W"; 
+            else if (j == Xfruit && i == Yfruit)
+                cout << "$"; 
+            else {
+                bool printTail = false;
+                for (int k = 0; k < tLength; k++) {
+                    if (tailX[k] == j && tailY[k] == i) {
+                        cout << "X"; 
+                        printTail = true;
+                        break;
+                    }
+                }
+                if (!printTail)
+                    cout << " ";
+            }
+        }
+        cout << endl;
+    }
+
+for (int i = 0; i < width; i++){
+    cout << "#";
+    }
+    cout << "\nScore: " << score << endl;
+```
 
 // include libraries
 
@@ -147,14 +184,14 @@ void construct() {
             if (j == 0 || j == width - 1)
                 cout << "#";
             else if (j == x && i == y)
-                cout << "O"; 
+                cout << "W"; 
             else if (j == Xfruit && i == Yfruit)
                 cout << "$"; 
             else {
                 bool printTail = false;
                 for (int k = 0; k < tLength; k++) {
                     if (tailX[k] == j && tailY[k] == i) {
-                        cout << "o"; 
+                        cout << "X"; 
                         printTail = true;
                         break;
                     }
@@ -206,7 +243,6 @@ void logic() {
         tailY[0] = y;
     }
 
-    // Move head
     switch (dir) {
         case Up:    
             y--; 
