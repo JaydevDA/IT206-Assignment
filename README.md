@@ -307,7 +307,7 @@ void logic() {
     }
 }
 ```
-## Running the program (int main) 🚀
+## Running the program 🚀
 
 - First of all, we will implement the function **game()**, which will set the parameters of the grpahics of the game.  
 - while gameover is false:  
