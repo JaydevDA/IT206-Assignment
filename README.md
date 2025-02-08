@@ -168,7 +168,8 @@ else {
 
 ### void input() :-
 - Here, we basically set dir to the respective enumerator by giving an input of w,a,s or d.  
-- for ex. if we type 'w', dir is set to 'Up', if we type 'a', dir is set to 'Left'.  
+- for ex. if we type 'w', dir is set to 'Up', if we type 'a', dir is set to 'Left'.
+- also, to avoid going directly to opposite direction, we add a condition that if dir is assigned to a specific direction, giving a command of going completely to the opposite direction will not be executed.
 - This can be done using switch-case.
 - This is where the properties of conio.h library will be used.  
 ```
@@ -210,8 +211,43 @@ for (int i = tLength - 1; i > 0; i--) {
     }
 ```
 - Now, we update the position of the head of the snake, depending on the current value of dir.
-- for ex. if dir = Up, y = y-1
--- dir = Left, x = x- 1
+- for ex. if dir = Up, y = y-1; if dir = Right, x = x + 1;
+
+```
+switch (dir) {
+        case Up:    
+            y--; 
+            break;
+        case Down:  
+            y++; 
+            break;
+        case Right: 
+            x++; 
+            break;
+        case Left:  
+            x--; 
+            break;
+        default: 
+            break;
+    }
+```
+
+- Now, we focus on how the game will end.
+- Game can be ended by setting gameover to true, if one of the few conditions is met.
+- there are 2 conditions: whether the snake collides with the map border or it collides with one of its tail segment. Thus we write the following code:
+```
+// if the positions x and y exceed beyond the limit of the border width or length respectively, we set gameover to be true.
+if (x <= 0 || x >= width - 1 || y < 0 || y >= length - 1) {
+    gameover = true;
+}
+//traversing the positions of each tail, if the position of the head of the snake is the same as the position of any other tail segment, we set gameover to be true.
+for (int i = 0; i < tLength; i++) {
+    if (tailX[i] == x && tailY[i] == y) {
+        gameover = true;
+    }
+}
+```
+
 // include libraries
 
 #include <iostream> 
