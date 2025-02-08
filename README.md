@@ -4,15 +4,15 @@
 - Rashi Krishnani 👧🏻
 - Rudrapratap Singh 😎
 
-# Description
+# Description 🔍
 
 -The Snake Game in C++ is a classic arcade-style game built to demonstrate fundamental programming concepts such as game loops, user input handling, and collision detection. What makes this version unique is its 
  clean, modular code structure, making it easy to modify and extend with additional features like scoring, speed variations, or graphical enhancements.
 -We will be using c++ as the coding language, and here is the step to step process to make the snake.
 
-# Code Overview
+# Code Overview ⌨️🖥️
 
-## Include Libraries:
+## Include Libraries 📚: 
 
 #include <iostream> - OS Agnostic // for doing i/p and o/p operations  
 #include <conio.h> - Non-OS Agnostic // for doing console i/p and o/p operations  
@@ -26,7 +26,7 @@
 ```
     
 
-## Declaring Variables:
+## Declaring Variables 🔤 :
 Values which will help in setting a graphical representation of the snake
 - making a constant width and length of 25 units.
 - **bool gameover** - to end the game when one of the many conditions is met.
@@ -49,7 +49,7 @@ direction dir;
 
   
 
-## Writing the key functions:
+## Writing the key functions 🗝️:
 
 there are 4 key functions necessary for the snake program:
 
@@ -58,7 +58,7 @@ there are 4 key functions necessary for the snake program:
 - **void input()** - To give inputs (ex. w,a,s,d) to move the snake.  
 - **void logic()** - To construct the logic of the game ie. when and how to increase the length of the tail, game is over when the snake collides with the border,etc.  
    
-### void game() :- 
+### void game() 🎮:- 
 
 - We will set gameover to be false ( to initiate the game )
 - We will set dir to Stop intitially ( snake will be stationary unless given command ) and in the middle of the map.
@@ -76,7 +76,7 @@ void game() {
     score,tLength = 0;
 }
 ```
-### void construct() :-
+### void construct() 🧱:-
 
 - to clear the console screen, we use "**system("cls");**"
 ```
@@ -196,7 +196,7 @@ void input() {
     }
 }
 ```
-### void logic() :-
+### void logic() 🧠:-
 - We have to make the elements in the tail to follow a path of the previous tail segments.  
 - This can be done by implementing a for loop in which we set the position of the current tail segment to the position of the previous tail segment and then, setting the first tail segment to be the previous position of the head of the snake.  
 ```
@@ -307,7 +307,7 @@ void logic() {
     }
 }
 ```
-## int main() (the section where the functions will be implemented)
+## Running the program (int main) 🚀
 
 - First of all, we will implement the function **game()**, which will set the parameters of the grpahics of the game.  
 - while gameover is false:  
