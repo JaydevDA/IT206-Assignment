@@ -167,6 +167,34 @@ else {
 - Any other position will be printed as " ".
 
 ### void input() :-
+- Here, we basically set dir to the respective enumerator by giving an input of w,a,s or d.  
+- for ex. if we type 'w', dir is set to 'Up', if we type 'a', dir is set to 'Left'.  
+- This can be done using switch-case.
+- This is where the properties of conio.h library will be used.  
+```
+void input() {
+    if (_kbhit()) {
+        switch (_getch()) {
+            case 'w': 
+                if (dir != Down) 
+                    dir = Up; 
+                    break;
+            case 'a': 
+                if (dir != Right) 
+                    dir = Left; 
+                    break;
+            case 's': 
+                if (dir != Up) 
+                    dir = Down; 
+                    break;
+            case 'd': 
+                if (dir != Left) 
+                    dir = Right; 
+                    break;
+        }
+    }
+}
+```
 
 // include libraries
 
