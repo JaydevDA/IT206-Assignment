@@ -37,14 +37,14 @@ Values which will help in setting a graphical representation of the snake
 - **enum direction** - to declare enum of directions like left,up,down and right, and also stop.
 
 ```
-bool gameover;
-const int width = 25; 
-const int length = 25;
-int x, y, Xfruit, Yfruit, score;
-int tailX[100], tailY[100]; 
-int tLength;         
-enum direction { Stop = 0, Up, Down, Left, Right };
-direction dir;
+bool gameover;  
+const int width = 25;  
+const int length = 25;  
+int x, y, Xfruit, Yfruit, score;  
+int tailX[100], tailY[100];  
+int tLength;  
+enum direction { Stop = 0, Up, Down, Left, Right };  
+direction dir;  
 ```
 
   
