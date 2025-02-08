@@ -209,6 +209,9 @@ for (int i = tLength - 1; i > 0; i--) {
         tailY[0] = y;
     }
 ```
+- Now, we update the position of the head of the snake, depending on the current value of dir.
+- for ex. if dir = Up, y = y-1
+-- dir = Left, x = x- 1
 // include libraries
 
 #include <iostream> 
