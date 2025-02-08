@@ -195,7 +195,20 @@ void input() {
     }
 }
 ```
+### void logic() :-
+- We have to make the elements in the tail to follow a path of the previous tail segments.  
+- This can be done by implementing a for loop in which we set the position of the current tail segment to the position of the previous tail segment and then, setting the first tail segment to be the previous position of the head of the snake.  
+```
+for (int i = tLength - 1; i > 0; i--) {
+        tailX[i] = tailX[i - 1];
+        tailY[i] = tailY[i - 1];
+    }
 
+    if (tLength > 0) {
+        tailX[0] = x;
+        tailY[0] = y;
+    }
+```
 // include libraries
 
 #include <iostream> 
