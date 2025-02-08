@@ -32,7 +32,7 @@ Values which will help in setting a graphical representation of the snake
 - **bool gameover** - to end the game when one of the many conditions is met.
 - **x,y and Xfruit,Yfruit** - Position of the head of the snake and a fruit respectively.
 - **int score = 0** - set the score to zero intitially.
-- **int tail[100] and tail[100]** - to store the elements in the tail.
+- **int tailX[100] and tailY[100]** - to store the two dimensional position of elements in the tail.
 - **int tLength = 0** - setting the length of the tail to be zero.
 - **enum direction** - to declare enum of directions like left,up,down and right, and also stop.
 
@@ -53,10 +53,12 @@ direction dir;
 
 there are 4 key functions necessary for the snake program:
 
-- void game() - to start/end the game
-- void construct() - to construct a graphical representation of the values 
+- **void game()** - To start/end the game
+- **void construct()** - To construct a graphical representation of border, snake and fruit.
+- **void input()** - To give inputs (ex. w,a,s,d) to move the snake.
+- **void logic()** - To construct the logic of the game ie. when and how to increase the length of the tail, game is over when the snake collides with the border,etc. 
   
-
+### void game() :- 
 // include libraries
 
 #include <iostream> 
