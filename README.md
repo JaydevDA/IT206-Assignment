@@ -310,7 +310,7 @@ void logic() {
 ## int main() (the section where the functions will be implemented)
 
 - First of all, we will implement the function **game()**, which will set the parameters of the grpahics of the game.  
-- while gameover is false:
+- while gameover is false:  
   we will implement **construct()** to construct the graphics of the game,  
   we will implement **input()** to type which key alphabets to assign dir to a specific direction(Up,Down,Left,Right)  
   we will then implement **logic()** to give logic to the program and how it works.  
