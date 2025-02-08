@@ -76,6 +76,13 @@ void game() {
     score,tLength = 0;
 }
 ```
+### void construct() :-
+
+- to clear the console screen, we use "**system("cls");**"
+```
+system("cls");
+```
+
 // include libraries
 
 #include <iostream> 
