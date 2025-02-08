@@ -18,6 +18,11 @@
 #include <conio.h> - Non-OS Agnostic // for doing console i/p and o/p operations  
 #include <windows.h> - Non-OS Agnostic // for system("cls")  
 
+``` #include <iostream>  
+    #include <conio.h>
+    #include <windows.h>```
+    
+
 ## Declaring Variables:
 Values which will help in setting a graphical representation of the snake
 - making a constant width and length of 25 units.
