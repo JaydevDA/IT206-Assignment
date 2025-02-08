@@ -22,6 +22,7 @@
     #include <iostream>  
     #include <conio.h>
     #include <windows.h>
+    using namespace std;
 ```
     
 
@@ -33,7 +34,19 @@ Values which will help in setting a graphical representation of the snake
 - **int score = 0** - set the score to zero intitially.
 - **int tail[100] and tail[100]** - to store the elements in the tail.
 - **int tLength = 0** - setting the length of the tail to be zero.
-- enum direction - to declare enum of directions like left,up,down and right, and also stop.
+- **enum direction** - to declare enum of directions like left,up,down and right, and also stop.
+
+```
+bool gameover;
+const int width = 25; 
+const int length = 25;
+int x, y, Xfruit, Yfruit, score;
+int tailX[100], tailY[100]; 
+int tLength = 0;         
+enum direction { Stop = 0, Up, Down, Left, Right };
+direction dir;
+```
+
   
 
 ## Writing the key functions:
