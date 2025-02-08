@@ -247,7 +247,15 @@ for (int i = 0; i < tLength; i++) {
     }
 }
 ```
-
+- when the snake eats the fruit, ie. when the position of the head of the snake is equal to that of the fruit, we increase the score and the length of the tail, and also set a new position for the fruit.
+```
+if (x == Xfruit && y == Yfruit) {
+        score += 10;
+        tLength++; 
+        Xfruit = rand() % (width - 1);
+        Yfruit = rand() % (length - 2);
+}
+```
 // include libraries
 
 #include <iostream> 
