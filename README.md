@@ -82,6 +82,32 @@ void game() {
 ```
 system("cls");
 ```
+- Now we make a border made up of '#' and below the border we also write the score. the code for making the border under the length and width given for the map is as follows:-
+```
+for (int i = 0; i < width; i++) {
+        cout << "#";
+    }
+    cout << endl;
+
+    for (int i = 0; i < (length - 1); i++) {
+        for (int j = 0; j < width; j++) {
+            if (j == 0 || j == (width - 1)){
+                cout << "#";
+            }
+            else {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+    
+
+    for (int i = 0; i < width; i++){
+    cout << "#";
+    }
+    cout << "\nScore: " << score << endl;
+```
+
 
 // include libraries
 
@@ -140,7 +166,9 @@ void construct() {
         cout << endl;
     }
 
-    for (int i = 0; i < width; i++) cout << "#";
+    for (int i = 0; i < width; i++){
+    cout << "#";
+    }
     cout << "\nScore: " << score << endl;
 }
 
