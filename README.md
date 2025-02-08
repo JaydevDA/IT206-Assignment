@@ -60,10 +60,10 @@ there are 4 key functions necessary for the snake program:
    
 ### void game() :- 
 
--We will set gameover to be false ( to initiate the game )  
--We will set dir to Stop intitially ( snake will be stationary unless given command ) and in the middle of the map.  
--As the position of the fruit needs to be randomized, we will use rand() to give random values of the fruit, under the border of the map.  
--set score and Tlength to zero, to initialize the score and the length of the tail of the snake to be zero.  
+- We will set gameover to be false ( to initiate the game )
+- We will set dir to Stop intitially ( snake will be stationary unless given command ) and in the middle of the map.
+- As the position of the fruit needs to be randomized, we will use rand() to give random values of the fruit, under the border of the map.
+- set score and Tlength to zero, to initialize the score and the length of the tail of the snake to be zero.  
 
 ```
 void game() {
