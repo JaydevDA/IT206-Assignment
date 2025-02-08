@@ -107,10 +107,11 @@ for (int i = 0; i < width; i++) {
     }
     cout << "\nScore: " << score << endl;
 ```
-- Now, we will graphically represent the position of the snake's head and the fruit.
-- Also we will graphicallly represent the elements of the growth of tail.
+- Now, we will graphically represent the position of the snake's head and the fruit.  
+- Also we will graphicallly represent the elements of the growth of tail.  
+- We will represent 'W' as the head, '$' as the fruit and 'X' as the tail.  
 ```
-// **Updating previous code**:
+// Updating previous code:
 for (int i = 0; i < width; i++) {
         cout << "#";
     }
@@ -145,7 +146,25 @@ for (int i = 0; i < width; i++){
     }
     cout << "\nScore: " << score << endl;
 ```
-
+- in this part of the above code:
+```
+else {
+                bool printTail = false;
+                for (int k = 0; k < tLength; k++) {
+                    if (tailX[k] == j && tailY[k] == i) {
+                        cout << "X"; 
+                        printTail = true;
+                        break;
+                    }
+                }
+                if (!printTail)
+                    cout << " ";
+            }
+```
+- Here, we take bool printTail, to specify if the specific cell at the position (j,i) is printed or not.  
+- By default, we take printTail to be false, as we have not printed a tail segment anywhere.  
+- After traversing, when (j,i) is equal to the position at tailX and tailY, we print the tail as 'X', and to specify that the cell is printed, we set printTail to be true.  
+- Any other position will be printed as " ".  
 // include libraries
 
 #include <iostream> 
