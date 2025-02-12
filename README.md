@@ -112,6 +112,8 @@ for (int i = 0; i < width; i++) {
 - We will represent 'W' as the head, '$' as the fruit and 'X' as the tail.  
 ```
 // Updating previous code:
+void construct(){
+system("cls");
 for (int i = 0; i < width; i++) {
         cout << "#";
     }
@@ -145,6 +147,7 @@ for (int i = 0; i < width; i++){
     cout << "#";
     }
     cout << "\nScore: " << score << endl;
+}
 ```
 - in this part of the above code:
 ```
