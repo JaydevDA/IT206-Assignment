@@ -28,7 +28,7 @@
 
 ## Declaring Variables 🔤 :
 Values which will help in setting a graphical representation of the snake
-- making a constant width and length of 25 units.
+- making a constant width of 40 units and length of 25 units.
 - **bool gameover** - to end the game when one of the many conditions is met.
 - **x,y and Xfruit,Yfruit** - Position of the head of the snake and a fruit respectively.
 - **int score** - Declaring score as a variable.
@@ -38,7 +38,7 @@ Values which will help in setting a graphical representation of the snake
 
 ```
 bool gameover;  
-const int width = 25;  
+const int width = 40;  
 const int length = 25;  
 int x, y, Xfruit, Yfruit, score;  
 int tailX[100], tailY[100];  
