@@ -71,8 +71,8 @@ void game() {
     dir = Stop;
     x = width / 2;
     y = length / 2;
-    Xfruit = rand() % (width - 1);
-    Yfruit = rand() % (length - 2);
+    Xfruit = rand() % (1,width - 1);
+    Yfruit = rand() % (1,length - 2);
     score,tLength = 0;
 }
 ```
