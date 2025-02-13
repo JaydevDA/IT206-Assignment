@@ -30,6 +30,7 @@
 Values which will help in setting a graphical representation of the snake
 - making a constant width of 40 units and length of 25 units.
 - **bool gameover** - to end the game when one of the many conditions is met.
+- **int Highscore** - to display the highscore of the overall game.
 - **x,y and Xfruit,Yfruit** - Position of the head of the snake and a fruit respectively.
 - **int score** - Declaring score as a variable.
 - **int tailX[100] and tailY[100]** - to store the two dimensional position of elements in the tail.
@@ -37,7 +38,8 @@ Values which will help in setting a graphical representation of the snake
 - **enum direction** - to declare enum of directions like left,up,down and right, and also stop.
 
 ```
-bool gameover;  
+bool gameover;
+int Highscore = 0;
 const int width = 40;  
 const int length = 25;  
 int x, y, Xfruit, Yfruit, score;  
@@ -82,7 +84,9 @@ void game() {
 ```
 system("cls");
 ```
-- Now we make a border made up of '#' and below the border we also write the score. the code for making the border under the length and width given for the map is as follows:-
+- Now we make a border made up of '#' and below the border we also write the score. the code for making the border under the length and width given for the map is as follows
+- also, we display score and highscore below the map.
+- after each update, if score > highscore, we will keep highscore to be the current score.
 ```
 for (int i = 0; i < width; i++) {
         cout << "#";
@@ -105,7 +109,9 @@ for (int i = 0; i < width; i++) {
     for (int i = 0; i < width; i++){
     cout << "#";
     }
-    cout << "\nScore: " << score << endl;
+    cout << "\nScore: " << score << endl << "Highscore: " << Highscore;
+    if(score > Highscore)
+        Highscore = score;
 ```
 - Now, we will graphically represent the position of the snake's head and the fruit.  
 - Also we will graphicallly represent the elements of the growth of tail.  
@@ -146,7 +152,9 @@ for (int i = 0; i < width; i++) {
 for (int i = 0; i < width; i++){
     cout << "#";
     }
-    cout << "\nScore: " << score << endl;
+    cout << "\nScore: " << score << endl << "Highscore: " << Highscore;
+    if(score > Highscore)
+        Highscore = score;
 }
 ```
 - in this part of the above code:
@@ -355,7 +363,7 @@ int main() {
     cout << "Do you want to restart? \n 1.Yes   2.No"<< endl;
     cin >> restart;
     }while(restart == 1);
-    cout << "Thanks for playing.";
+    cout << "Thanks for playing." <<endl<< "Highscore: " << Highscore;;
     
     return 0;
 }
@@ -367,7 +375,8 @@ int main() {
 #include <windows.h>
 using namespace std;
 
-bool gameover;  
+bool gameover; 
+int Highscore = 0; 
 const int width = 40;  
 const int length = 25;  
 int x, y, Xfruit, Yfruit, score;  
@@ -383,7 +392,8 @@ void game() {
     y = length / 2;
     Xfruit = rand() % (1,width - 1);
     Yfruit = rand() % (1,length - 2);
-    score,tLength = 0;
+    score = 0;
+    tLength = 0;
 }
 
 void construct(){
@@ -420,7 +430,9 @@ for (int i = 0; i < width; i++) {
 for (int i = 0; i < width; i++){
     cout << "#";
     }
-    cout << "\nScore: " << score << endl;
+    cout << "\nScore: " << score << endl << "Highscore: " << Highscore;
+    if(score > Highscore)
+        Highscore = score;
 }
 
 void input() {
@@ -523,7 +535,7 @@ int main() {
     cout << "Do you want to restart? \n 1.Yes   2.No"<< endl;
     cin >> restart;
     }while(restart == 1);
-    cout << "Thanks for playing.";
+    cout << "Thanks for playing." <<endl<< "Highscore: " << Highscore;;
     
     return 0;
 }
