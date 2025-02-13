@@ -342,7 +342,7 @@ int main() {
             Sleep(100);
         }
         else if(difficulty == 2){
-            Sleep(70);
+            Sleep(40);
         }
         else if(difficulty == 3){
             Sleep(1);
@@ -510,7 +510,7 @@ int main() {
             Sleep(100);
         }
         else if(difficulty == 2){
-            Sleep(70);
+            Sleep(40);
         }
         else if(difficulty == 3){
             Sleep(1);
