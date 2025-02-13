@@ -311,25 +311,52 @@ void logic() {
 }
 ```
 ## Running the program 🚀
-
-- First of all, we will implement the function **game()**, which will set the parameters of the grpahics of the game.  
+- we will declare restart variable, to restart the game. (if we want to at the end of main code)
+- We will also declare diffulty variable to to choose the difficulty of the program.
+- then, we will implement the function **game()**, which will set the parameters of the grpahics of the game.
+- We will insert an input for difficutly as shown in the code.
 - while gameover is false:  
   we will implement **construct()** to construct the graphics of the game,  
-  we will implement **input()** to type which key alphabets to assign dir to a specific direction(Up,Down,Left,Right)  
+  we will implement **input()** to type which key alphabets to assign dir to a specific direction(Up,Down,Left,Right)    
   we will then implement **logic()** to give logic to the program and how it works.  
-  we will write Sleep(100) for the program to update at a moderate time interval, that makes the game playable.  
-- when gameover becomes true, it skips the while loop and gives the output that the game has ended.  
+  By using if/else statement, we will choose whether the game updation should be fast or slow by using sleep() function.  
+- when gameover becomes true, it skips the while loop and gives the output that the game has ended.
+- then, we will print 'game over'.
+- we will retrieve the input for restart.
+- If you want to restart the game, we will use do while loop, where the whole code related to the working of the game is under 'do', while restart = 1.
+- if we enter restart = '2', the do-while loop ends, and we will print the output "Thanks for playing" .
 
 ```
 int main() {
+    int restart;
+    do{
     game();
+    int difficulty;
+    cout << "Choose difficulty(serial number): \n 1. Easy      2. Medium      3. Hard"<< endl;
+    cin >> difficulty;
     while (!gameover) {
         construct();
         input();
         logic();
-        Sleep(100);  
+        if(difficulty == 1){
+            Sleep(100);
+        }
+        else if(difficulty == 2){
+            Sleep(70);
+        }
+        else if(difficulty == 3){
+            Sleep(1);
+        }
+        else
+            cout << "Choose valid number";
     }
+    
     cout << "\nGame Over!\n";
+    cout << "Do you want to restart? \n 1.Yes   2.No"<< endl;
+    cin >> restart;
+    }while(restart == 1);
+    cout << "Thanks for playing.";
+    
     return 0;
 }
 ```
@@ -469,14 +496,35 @@ void logic() {
 }
 
 int main() {
+    int restart;
+    do{
     game();
+    int difficulty;
+    cout << "Choose difficulty(serial number): \n 1. Easy      2. Medium      3. Hard"<< endl;
+    cin >> difficulty;
     while (!gameover) {
         construct();
         input();
         logic();
-        Sleep(100);  
+        if(difficulty == 1){
+            Sleep(100);
+        }
+        else if(difficulty == 2){
+            Sleep(70);
+        }
+        else if(difficulty == 3){
+            Sleep(1);
+        }
+        else
+            cout << "Choose valid number";
     }
+    
     cout << "\nGame Over!\n";
+    cout << "Do you want to restart? \n 1.Yes   2.No"<< endl;
+    cin >> restart;
+    }while(restart == 1);
+    cout << "Thanks for playing.";
+    
     return 0;
 }
 ```
