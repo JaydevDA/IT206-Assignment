@@ -305,8 +305,8 @@ void logic() {
     if (x == Xfruit && y == Yfruit) {
         score += 10;
         tLength++; 
-        Xfruit = rand() % (width - 1);
-        Yfruit = rand() % (length - 2);
+        Xfruit = rand() % (1, width - 1);
+        Yfruit = rand() % (1, length - 2);
     }
 }
 ```
